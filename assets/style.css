@@ -54,7 +54,7 @@ footer {
   background-color: white;
   margin-inline: auto;
   padding: 1em;
-  width: clamp(500px, 90%, 700px);
+  width: clamp(320px, 90%, 700px);
 }
 
 header {
