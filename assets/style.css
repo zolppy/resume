@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #c9c9c9;
+  color: black;
+  display: grid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  grid-template-areas:
+    "header header header header header"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "footer footer footer footer footer";
+  letter-spacing: 0;
+  line-height: 1.25;
+  min-height: 100dvh;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a::after {
+  content: "\0020\1f517";
+}
+
+header,
+main,
+footer {
+  background-color: white;
+  margin-inline: auto;
+  padding: 1em;
+  width: clamp(500px, 90%, 700px);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  padding: 1em;
+  row-gap: 2rem;
+}
+
+header h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+  row-gap: 2em;
+}
+
+section {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
+.personal-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.personal-data .wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.personal-data img {
+  border-radius: 50%;
+  width: 220px;
+}
+
+.personal-data span {
+  font-weight: bold;
+}
+
+.academic-background {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.academic-background .wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.academic-background span {
+  font-weight: bold;
+}
+
+.profissional-experience {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.profissional-experience ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.profissional-experience .wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.profissional-experience span {
+  font-weight: bold;
+}
+
+.skills-and-competencies {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.skills-and-competencies ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  grid-area: footer;
+  justify-content: space-around;
+}
+
+footer a {
+  color: darkturquoise;
+}
