@@ -4,79 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currículo &mdash; Nome Sobrenome</title>
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/estilo.css" />
     <link
       rel="shortcut icon"
-      href="assets/img/favicon.ico"
+      href="assets/imagens/favicon.ico"
       type="image/x-icon"
     />
   </head>
   <body>
-    <header>
-      <h1>Nome Sobrenome</h1>
+    <header class="conteiner">
+      <h1 class="titulo">Nome Sobrenome</h1>
       <hr />
     </header>
-    <main>
-      <section class="personal-data">
-        <h2>Dados Pessoais</h2>
-        <img src="assets/img/default-profile.svg" alt="" />
-        <div class="wrapper">
+    <main class="conteiner">
+      <section class="dados-pessoais">
+        <h2 class="subtitulo">Dados Pessoais</h2>
+        <img src="assets/imagens/foto.svg" alt="" />
+        <div class="dados">
           <p><span>Nacionalidade</span>: Nacionalidade</p>
           <p><span>E-mail</span>: email@email.com</p>
           <p><span>Endereço</span>: Cidade &mdash; Estado</p>
           <p><span>Telefone</span>: (00) 90000-0000</p>
         </div>
       </section>
-      <section class="academic-background">
-        <h2>Formação Acadêmica</h2>
-        <div class="wrapper">
-          <p><span>Início e fim</span>: mm/aaaa &mdash; atualmente</p>
-          <p><span>Nível</span>: Nível</p>
-          <p><span>Nome do curso</span>: Nome do curso</p>
-        </div>
-        <div class="wrapper">
-          <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
-          <p><span>Nível</span>: Nível</p>
-          <p><span>Nome do curso</span>: Nome do curso</p>
-        </div>
-        <div class="wrapper">
-          <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
-          <p><span>Nível</span>: Nível</p>
-          <p><span>Nome do curso</span>: Nome do curso</p>
-        </div>
-      </section>
-      <section class="profissional-experience">
-        <h2>Experiência Profissional</h2>
-        <ul>
-          <li>
-            <div class="wrapper">
-              <p><span>Companhia</span>: Companhia</p>
-              <p><span>Início e fim</span>: mm/aaaa &mdash; atualmente</p>
-              <p><span>Cargo</span>: Cargo</p>
-              <p><span>Nível</span>: Nível</p>
-            </div>
+      <section class="formacao-academica">
+        <h2 class="subtitulo">Formação Acadêmica</h2>
+        <ul class="formacoes">
+          <li class="formacao">
+            <p><span>Início e fim</span>: mm/aaaa &mdash; atualmente</p>
+            <p><span>Nível</span>: Nível</p>
+            <p><span>Nome do curso</span>: Nome do curso</p>
           </li>
-          <li>
-            <div class="wrapper">
-              <p><span>Companhia</span>: Companhia</p>
-              <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
-              <p><span>Cargo</span>: Cargo</p>
-              <p><span>Nível</span>: Nível</p>
-            </div>
+          <li class="formacao">
+            <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
+            <p><span>Nível</span>: Nível</p>
+            <p><span>Nome do curso</span>: Nome do curso</p>
           </li>
-          <li>
-            <div class="wrapper">
-              <p><span>Companhia</span>: Companhia</p>
-              <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
-              <p><span>Cargo</span>: Cargo</p>
-              <p><span>Nível</span>: Nível</p>
-            </div>
+          <li class="formacao">
+            <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
+            <p><span>Nível</span>: Nível</p>
+            <p><span>Nome do curso</span>: Nome do curso</p>
           </li>
         </ul>
       </section>
-      <section class="skills-and-competencies">
-        <h2>Habilidades e Competências</h2>
-        <ul>
+      <section class="experiencia-profissional">
+        <h2 class="subtitulo">Experiência Profissional</h2>
+        <ul class="experiencias">
+          <li class="experiencia">
+            <p><span>Companhia</span>: Companhia</p>
+            <p><span>Início e fim</span>: mm/aaaa &mdash; atualmente</p>
+            <p><span>Cargo</span>: Cargo</p>
+            <p><span>Nível</span>: Nível</p>
+          </li>
+          <li class="experiencia">
+            <p><span>Companhia</span>: Companhia</p>
+            <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
+            <p><span>Cargo</span>: Cargo</p>
+            <p><span>Nível</span>: Nível</p>
+          </li>
+          <li class="experiencia">
+            <p><span>Companhia</span>: Companhia</p>
+            <p><span>Início e fim</span>: mm/aaaa &mdash; mm/aaaa</p>
+            <p><span>Cargo</span>: Cargo</p>
+            <p><span>Nível</span>: Nível</p>
+          </li>
+        </ul>
+      </section>
+      <section class="habilidades-e-competencias">
+        <h2 class="subtitulo">Habilidades e Competências</h2>
+        <ul class="habilidades">
           <li>Habilidade 01</li>
           <li>Habilidade 02</li>
           <li>Habilidade 03</li>
@@ -89,27 +85,41 @@
           <li>Habilidade 10</li>
         </ul>
       </section>
-      <section class="contact">
-        <h2>Contato</h2>
-        <div class="wrapper">
-          <ul>
-            <li>
+      <section class="contato">
+        <h2 class="subtitulo">Contato</h2>
+        <ul class="contatos">
+          <li>
+            <p>
               <a href="#" target="_blank">Meio de contato 1</a>
-            </li>
-            <li>
+              <span>&#x1F517;</span>
+            </p>
+          </li>
+          <li>
+            <p>
               <a href="#" target="_blank">Meio de contato 2</a>
-            </li>
-            <li>
+              &#x1F517;
+            </p>
+          </li>
+          <li>
+            <p>
               <a href="#" target="_blank">Meio de contato 3</a>
-            </li>
-          </ul>
-        </div>
+              &#x1F517;
+            </p>
+          </li>
+        </ul>
       </section>
-      <hr />
     </main>
-    <footer>
-      <p>Desenvolvido por</p>
-      <a href="https://github.com/zolppy" target="_blank">Gabriel Cavalcante</a>
+    <footer class="conteiner">
+      <hr />
+      <div>
+        <p>Desenvolvido por</p>
+        <p>
+          <a href="https://github.com/zolppy" target="_blank"
+            >Gabriel Cavalcante</a
+          >
+          &#x1F517;
+        </p>
+      </div>
     </footer>
   </body>
 </html>
