@@ -1,5 +1,0 @@
-@import "tailwindcss";
-
-* {
-  @apply scroll-smooth;
-}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Gabriel Cavalcante's official resume">
+    <title>Resume — Gabriel Cavalcante</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FMM9C4CFJR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-FMM9C4CFJR");
+    </script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- html2pdf CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <style>
+      /* Basic print-friendly defaults */
+      @page {
+        margin: 12mm;
+      }
+      @media print {
+        html,
+        body {
+          background: #fff !important;
+          color: #000 !important;
+        }
+        #exportBtn {
+          display: none !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        /* Remove shadows and rounded corners for print */
+        .paper {
+          box-shadow: none !important;
+          border-radius: 0 !important;
+        }
+      }
+      /* Ensure readable font sizes on print */
+      @media print {
+        body {
+          font-size: 11pt;
+          line-height: 1.2;
+        }
+        h1 {
+          font-size: 18pt;
+        }
+        h2 {
+          font-size: 12pt;
+        }
+        p,
+        li {
+          font-size: 10.5pt;
+        }
+      }
+      /* Keep anchor links plain for ATS (no icons) */
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      /* Limit resume width for readability */
+      .container-max {
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 py-8 px-4">
+    <div class="container-max">
+      <!-- Export button -->
+      <div class="flex justify-end mb-4 no-print">
+        <button
+          id="exportBtn"
+          class="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-800 focus:outline-none focus:ring"
+        >
+          Export to PDF
+        </button>
+      </div>
+      <!-- Resume content (only this element will be exported) -->
+      <article
+        id="resume"
+        class="paper bg-white p-8 shadow rounded leading-relaxed print:shadow-none"
+      >
+        <!-- Header -->
+        <header class="mb-6">
+          <h1 class="text-3xl font-semibold text-gray-900">
+            Gabriel Cavalcante
+          </h1>
+          <p class="mt-2 text-sm text-gray-700">
+            Software Engineer — Frontend, AI/ML & Cloud
+          </p>
+          <address class="not-italic mt-3 text-sm text-gray-600 space-y-1">
+            <div>
+              Email:
+              <a href="mailto:gabriel.lcifba@gmail.com"
+                >gabriel.lcifba@gmail.com</a
+              >
+            </div>
+            <div>
+              Phone/WhatsApp:
+              <a href="tel:+5574981343313">+55 (74) 98134-3313</a>
+            </div>
+            <div>
+              LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/zolppy"
+                rel="noopener noreferrer"
+                >linkedin.com/in/zolppy</a
+              >
+            </div>
+            <div>
+              GitHub:
+              <a href="https://www.github.com/zolppy" rel="noopener noreferrer"
+                >github.com/zolppy</a
+              >
+            </div>
+          </address>
+        </header>
+        <main>
+          <!-- Professional Summary -->
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">
+              Professional Summary
+            </h2>
+            <p class="mt-2 text-gray-700 text-sm">
+              Skilled frontend developer and AI enthusiast with expertise in
+              React.js, Next.js, TypeScript, and AWS. Experienced in building
+              responsive UIs and implementing AI solutions, he holds
+              certifications in Gen AI and Agile methodologies. Fluent in
+              Portuguese and English, he is passionate about innovation and
+              continuous learning in tech.
+            </p>
+          </section>
+          <!-- Skills -->
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">Skills</h2>
+            <p class="mt-2 text-gray-700 text-sm">
+              Accesibility (WCAG), Agile, Artificial Neural Networks, AWS Cloud
+              Computing, Boto3, Computer Vision, Convolutional Neural Networks,
+              CSS3, Docker, Express.js, FastAPI, Framer Motion, Generative AI,
+              Git, GitHub, HTML5, Jest, JavaScript, Kanban, Keras, LangChain,
+              Linux, Machine Learning, Next.js, Node.js, Performance
+              Optimization, PostgreSQL, Python, React Testing Library, React.js,
+              Rest APIs, Retrieval-Augmented Generation, Scrum, SQL, Tailwind
+              CSS, TensorFlow, TypeScript.
+            </p>
+          </section>
+          <!-- Professional Experience -->
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">
+              Professional Experience
+            </h2>
+            <!-- Position 1 (most recent) -->
+            <article class="mt-4">
+              <h3 class="text-md font-semibold text-gray-900">
+                Desenvolvedor Frontend
+              </h3>
+              <p class="text-sm text-gray-700">
+                Eruda — Remote · Jacobina, BA <br />
+                <time datetime="2023-10">Oct 2023</time> —
+                <time datetime="2025-04">Apr 2025</time>
+              </p>
+              <ul class="list-disc ml-5 mt-2 text-gray-700 text-sm space-y-1">
+                <li>
+                  Developed and maintained modern, fluid, and accessible user
+                  interfaces using cutting-edge technologies.
+                </li>
+                <li>
+                  Ensured dynamic, performant, and responsive designs aligned
+                  with high-fidelity models.
+                </li>
+                <li>
+                  Collaborated with cross-functional teams to deliver seamless
+                  user experiences.
+                </li>
+              </ul>
+            </article>
+            <article class="mt-4">
+              <h3 class="text-md font-semibold text-gray-900">
+                Artificial Intelligence and Machine Learning Intern
+              </h3>
+              <p class="text-sm text-gray-700">
+                Compass UOL — Remote · Passo Fundo, RS <br />
+                <time datetime="2024-10">Oct 2024</time> —
+                <time datetime="2025-03">Mar 2025</time>
+              </p>
+              <ul class="list-disc ml-5 mt-2 text-gray-700 text-sm space-y-1">
+                <li>
+                  Completed an extensive learning path covering NLP, Artificial
+                  Neural Networks, Deep Learning, and AWS Cloud Computing.
+                </li>
+                <li>
+                  Implemented AI models for real-world applications, including
+                  chatbots and optical character recognition (OCR).
+                </li>
+                <li>
+                  Worked on practical projects to apply theoretical knowledge in
+                  AI and cloud technologies.
+                </li>
+              </ul>
+            </article>
+            <article class="mt-4">
+              <h3 class="text-md font-semibold text-gray-900">
+                Technical Support and Integration
+              </h3>
+              <p class="text-sm text-gray-700">
+                Infotec — In Person · Jacobina, BA <br />
+                <time datetime="2022-11">Nov 2022</time> —
+                <time datetime="2023-04">Apr 2023</time>
+              </p>
+              <ul class="list-disc ml-5 mt-2 text-gray-700 text-sm space-y-1">
+                <li>
+                  Assembled, maintained, and configured computers and
+                  peripherals.
+                </li>
+                <li>
+                  Managed system integrations, including network and database
+                  configurations.
+                </li>
+                <li>
+                  Provided technical support to ensure seamless operations and
+                  system reliability.
+                </li>
+              </ul>
+            </article>
+            <article class="mt-4">
+              <h3 class="text-md font-semibold text-gray-900">
+                Programa Institucional de Bolsas de Iniciação Científica
+              </h3>
+              <p class="text-sm text-gray-700">
+                Coordenação de Aperfeiçoamento de Pessoal de Nível Superior
+                (CAPES) — Hybrid · Jacobina, BA <br />
+                <time datetime="2020-11">Nov 2020</time> —
+                <time datetime="2022-05">May 2022</time>
+              </p>
+              <ul class="list-disc ml-5 mt-2 text-gray-700 text-sm space-y-1">
+                <li>
+                  Prepared lesson plans, teaching materials, and pedagogical
+                  resources for Computer Science education.
+                </li>
+                <li>
+                  Conducted workshops and other teaching-related activities to
+                  support student learning.
+                </li>
+                <li>
+                  Contributed to academic research and development in the field
+                  of Computer Science.
+                </li>
+              </ul>
+            </article>
+          </section>
+          <!-- Education -->
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">Education</h2>
+            <div class="mt-2 text-gray-700 text-sm">
+              <p class="font-semibold">Degree in Computer Science</p>
+              <p>
+                Instituto Federal de Educação, Ciência e Tecnologia da Bahia
+                (IFBA), Jacobina — 2019 — Now.
+              </p>
+            </div>
+          </section>
+          <!-- Certifications -->
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">Certifications</h2>
+            <ul class="mt-2 list-disc ml-5 text-gray-700 text-sm space-y-1">
+              <li>Gen AI Technical Certified — (2024)</li>
+              <li>AI-Assisted Certified Professional — (2024)</li>
+              <li>Agile-Certified Fast Inception with AI Cockpit — (2024)</li>
+            </ul>
+          </section>
+          <!-- Projects -->
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">Projects</h2>
+            <article class="mt-3 text-sm text-gray-700">
+              <h3 class="font-semibold">Interior Design</h3>
+              <p class="mt-1">
+                Responsive, modern and fluid langing page that shows interior
+                design projects, developed using cutting-edge technologies and
+                methodologies like Next.js, Tailwind CSS, TypeScript, Git,
+                Github, Docker, Scrum and mobile first.
+              </p>
+            </article>
+            <article class="mt-3 text-sm text-gray-700">
+              <h3 class="font-semibold">Fashion Blog</h3>
+              <p class="mt-1">
+                Responsive, modern and fluid fashion blog that shows interior
+                design projects, developed using cutting-edge technologies and
+                methodologies like Next.js, Tailwind CSS, TypeScript, Git,
+                Github, Docker, Scrum and mobile first.
+              </p>
+            </article>
+            <article class="mt-3 text-sm text-gray-700">
+              <h3 class="font-semibold">Then Crust Pizza</h3>
+              <p class="mt-1">
+                Responsive, modern and fluid langing page that shows kind of
+                pizza in sale, developed using cutting-edge technologies and
+                methodologies like Next.js, Tailwind CSS, TypeScript, Git,
+                Github, Docker, Scrum and mobile first.
+              </p>
+            </article>
+
+            <article class="mt-3 text-sm text-gray-700">
+              <h3 class="font-semibold">Image Dimensionalization Reduction</h3>
+              <p class="mt-1">
+                A Python project for converting RGB images to grayscale and
+                binary formats. Uses luminance calculation for grayscale
+                conversion and thresholding for binary conversion. Includes
+                functions to save the processed images. Built with NumPy and PIL
+                (Python Imaging Library).
+              </p>
+            </article>
+            <article class="mt-3 text-sm text-gray-700">
+              <h3 class="font-semibold">Iris Classifier</h3>
+              <p class="mt-1">
+                This project demonstrates the use of a Multi-layer Perceptron
+                (MLP) classifier on the Iris dataset. It includes data
+                preprocessing, hyperparameter tuning with GridSearchCV, model
+                evaluation using metrics like accuracy, precision, recall,
+                F-score, and specificity, and visualization of ROC curves for
+                multi-class classification.
+              </p>
+            </article>
+            <article class="mt-3 text-sm text-gray-700">
+              <h3 class="font-semibold">Cats and Dogs Classifier</h3>
+              <p class="mt-1">
+                Implementation of two models using a convolutional neural
+                network (CNN) to classify images into two distinct classes (dogs
+                and cats). Transfer learning is performed between the first and
+                second models to improve results, which are measured using
+                performance metrics to assess training progress.
+              </p>
+            </article>
+          </section>
+          <section class="mb-6">
+            <h2 class="text-xl font-medium text-gray-800">Languages</h2>
+            <ul class="mt-2 list-disc ml-5 text-gray-700 text-sm space-y-1">
+              <li>Portuguese (native)</li>
+              <li>English (advanced)</li>
+            </ul>
+          </section>
+          <!-- Footer -->
+          <footer class="mt-8 text-xs text-gray-500">
+            <p>
+              Keywords: React.js, Next.js, Node.js, Express.js, FastAPI, Python,
+              JavaScript, TypeScript, Front-end Developer, AI/ML Developer,
+              Back-end Developer, HTML5, CSS3, Docker, Git, GitHub, Scrum, AWS
+              Cloud Computing, Computer Vision, TensorFlow, Tailwind CSS, Agile.
+            </p>
+          </footer>
+        </main>
+      </article>
+    </div>
+    <script>
+      // Export to PDF using html2pdf.js, exporting the #resume element so the export button is not included.
+      document
+        .getElementById("exportBtn")
+        .addEventListener("click", function () {
+          const element = document.getElementById("resume");
+
+          // Options tuned for print-like output matching on-screen
+          const opt = {
+            margin: [10, 10, 10, 10], // mm
+            filename: "Avery-Brooks-Resume.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: {
+              scale: 2,
+              useCORS: true,
+              logging: false,
+              // Allow larger render size for better fidelity
+              windowWidth: document.documentElement.scrollWidth,
+            },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          };
+
+          // Generate PDF
+          html2pdf()
+            .set(opt)
+            .from(element)
+            .save()
+            .catch(function (err) {
+              console.error("PDF export failed", err);
+              alert("Export failed. Please try again in a modern browser.");
+            });
+        });
+    </script>
+  </body>
+</html>
