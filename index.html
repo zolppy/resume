@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Gabriel Cavalcante's official resume">
+    <meta name="description" content="Gabriel Cavalcante's official resume" />
     <title>Resume — Gabriel Cavalcante</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -23,58 +25,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- html2pdf CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-    <style>
-      /* Basic print-friendly defaults */
-      @page {
-        margin: 12mm;
-      }
-      @media print {
-        html,
-        body {
-          background: #fff !important;
-          color: #000 !important;
-        }
-        #exportBtn {
-          display: none !important;
-        }
-        .no-print {
-          display: none !important;
-        }
-        /* Remove shadows and rounded corners for print */
-        .paper {
-          box-shadow: none !important;
-          border-radius: 0 !important;
-        }
-      }
-      /* Ensure readable font sizes on print */
-      @media print {
-        body {
-          font-size: 11pt;
-          line-height: 1.2;
-        }
-        h1 {
-          font-size: 18pt;
-        }
-        h2 {
-          font-size: 12pt;
-        }
-        p,
-        li {
-          font-size: 10.5pt;
-        }
-      }
-      /* Keep anchor links plain for ATS (no icons) */
-      a {
-        color: inherit;
-        text-decoration: underline;
-      }
-      /* Limit resume width for readability */
-      .container-max {
-        max-width: 820px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
   </head>
   <body class="bg-gray-50 py-8 px-4">
     <div class="container-max">
@@ -103,9 +53,7 @@
           <address class="not-italic mt-3 text-sm text-gray-600 space-y-1">
             <div>
               Email:
-              <a href="mailto:gabriel.lcifba@gmail.com"
-                >zolppy.me@gmail.com</a
-              >
+              <a href="mailto:gabriel.lcifba@gmail.com">zolppy.me@gmail.com</a>
             </div>
             <div>
               Phone/WhatsApp:
@@ -134,26 +82,34 @@
               Professional Summary
             </h2>
             <p class="mt-2 text-gray-700 text-sm">
-              Skilled frontend developer and AI enthusiast with expertise in
-              React.js, Next.js, TypeScript, and AWS. Experienced in building
-              responsive UIs and implementing AI solutions, he holds
-              certifications in Gen AI and Agile methodologies. Fluent in
-              Portuguese and English, he is passionate about innovation and
-              continuous learning in tech.
+              Results-driven Software Engineer with 2+ years of experience
+              specializing in modern frontend development and a strong
+              foundation in AI/ML and cloud technologies. Proven expertise in
+              building accessible, high-performance web applications using
+              React.js, Next.js, and TypeScript. Passionate about leveraging
+              machine learning, including Computer Vision and NLP, to solve
+              complex problems, with hands-on experience from model development
+              to deployment on AWS. A collaborative team player adept in Agile
+              methodologies, eager to contribute to full-stack projects and
+              innovative AI solutions.
             </p>
           </section>
           <!-- Skills -->
           <section class="mb-6">
             <h2 class="text-xl font-medium text-gray-800">Skills</h2>
             <p class="mt-2 text-gray-700 text-sm">
-              Accesibility (WCAG), Agile, Artificial Neural Networks, AWS Cloud
-              Computing, Boto3, Computer Vision, Convolutional Neural Networks,
-              CSS3, Docker, Express.js, FastAPI, Framer Motion, Generative AI,
-              Git, GitHub, HTML5, Jest, JavaScript, Kanban, Keras, LangChain,
-              Linux, Machine Learning, Next.js, Node.js, Performance
-              Optimization, PostgreSQL, Python, React Testing Library, React.js,
-              Rest APIs, Retrieval-Augmented Generation, Scrum, SQL, Tailwind
-              CSS, TensorFlow, TypeScript.
+              Accesibility (WCAG), AWS Cloud Computing, Boto3, Computer Vision,
+              Convolutional Neural Networks, CSS3, Deep Learning, Docker,
+              Express.js, Evaluation Metrics, FastAPI, Framer Motion, Generative
+              AI, Git, Github, HTML5, Hyperparameter Tunning, Image
+              Preprocessing, Jest, JavaScript, Kaglle, Kanban, LangChain, Linux,
+              Machine Learning, Natural Language Processing, Neural Networks,
+              Next.js, Node.js, Object Classification, Object Detection, Object
+              Identification, Object Recognition, Object Segmentation, OpenCV,
+              Performance Optimization, PostgreSQL, Prompt Engineering, Python,
+              React Testing Library, React.js, Rest APIs, Retrieval-Augmented
+              Generation, ScikitLearn, Scrum, SQL, Tailwind CSS, TensorFlow,
+              Transfer Learning, TypeScript.
             </p>
           </section>
           <!-- Professional Experience -->
@@ -310,36 +266,34 @@
                 Github, Docker, Scrum and mobile first.
               </p>
             </article>
-
             <article class="mt-3 text-sm text-gray-700">
-              <h3 class="font-semibold">Image Dimensionalization Reduction</h3>
+              <h3 class="font-semibold">Celebrity Face Recognition</h3>
               <p class="mt-1">
-                A Python project for converting RGB images to grayscale and
-                binary formats. Uses luminance calculation for grayscale
-                conversion and thresholding for binary conversion. Includes
-                functions to save the processed images. Built with NumPy and PIL
-                (Python Imaging Library).
+                Celebrity face recognition system built using deep learning. It
+                leverages a Convolutional Neural Network to identify individuals
+                from a dataset of celebrity images. The system first
+                pre-processes the image data, trains the model, and then uses a
+                Haar Cascade classifier to detect faces in new images.
               </p>
             </article>
             <article class="mt-3 text-sm text-gray-700">
-              <h3 class="font-semibold">Iris Classifier</h3>
+              <h3 class="font-semibold">Recommendation System</h3>
               <p class="mt-1">
-                This project demonstrates the use of a Multi-layer Perceptron
-                (MLP) classifier on the Iris dataset. It includes data
-                preprocessing, hyperparameter tuning with GridSearchCV, model
-                evaluation using metrics like accuracy, precision, recall,
-                F-score, and specificity, and visualization of ROC curves for
-                multi-class classification.
+                This project demonstrates the creation of a content-based image
+                recommendation system. It leverages a pre-trained VGG16 deep
+                learning model to extract meaningful feature vectors from
+                images. These features are then compared using cosine similarity
+                to identify and recommend visually similar images.
               </p>
             </article>
             <article class="mt-3 text-sm text-gray-700">
-              <h3 class="font-semibold">Cats and Dogs Classifier</h3>
+              <h3 class="font-semibold">Object Detection With YOLO</h3>
               <p class="mt-1">
-                Implementation of two models using a convolutional neural
-                network (CNN) to classify images into two distinct classes (dogs
-                and cats). Transfer learning is performed between the first and
-                second models to improve results, which are measured using
-                performance metrics to assess training progress.
+                This project demonstrates how to train a YOLOv8 object detection
+                model to detect various types of fruits. The process involves
+                loading a pre-trained YOLOv8 model, training it on a custom
+                dataset of fruits, evaluating its performance, and running
+                inference on sample images.
               </p>
             </article>
           </section>
@@ -353,47 +307,13 @@
           <!-- Footer -->
           <footer class="mt-8 text-xs text-gray-500">
             <p>
-              Keywords: React.js, Next.js, Node.js, Express.js, FastAPI, Python,
-              JavaScript, TypeScript, Front-end Developer, AI/ML Developer,
-              Back-end Developer, HTML5, CSS3, Docker, Git, GitHub, Scrum, AWS
-              Cloud Computing, Computer Vision, TensorFlow, Tailwind CSS, Agile.
+              Keywords: Artificial Intelligence Developer, AWS Cloud Computing,
+              Back-end Developer, Front-end Developer, Fullstack Developer,
+              Machine Learning Developer, Prompt Engineering.
             </p>
           </footer>
         </main>
       </article>
     </div>
-    <script>
-      // Export to PDF using html2pdf.js, exporting the #resume element so the export button is not included.
-      document
-        .getElementById("exportBtn")
-        .addEventListener("click", function () {
-          const element = document.getElementById("resume");
-
-          // Options tuned for print-like output matching on-screen
-          const opt = {
-            margin: [10, 10, 10, 10], // mm
-            filename: "resume-gabriel-cavalcante.pdf",
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: {
-              scale: 2,
-              useCORS: true,
-              logging: false,
-              // Allow larger render size for better fidelity
-              windowWidth: document.documentElement.scrollWidth,
-            },
-            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-          };
-
-          // Generate PDF
-          html2pdf()
-            .set(opt)
-            .from(element)
-            .save()
-            .catch(function (err) {
-              console.error("PDF export failed", err);
-              alert("Export failed. Please try again in a modern browser.");
-            });
-        });
-    </script>
   </body>
 </html>

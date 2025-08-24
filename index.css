@@ -1,0 +1,50 @@
+/* Basic print-friendly defaults */
+@page {
+  margin: 12mm;
+}
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  #exportBtn {
+    display: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  /* Remove shadows and rounded corners for print */
+  .paper {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+/* Ensure readable font sizes on print */
+@media print {
+  body {
+    font-size: 11pt;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 18pt;
+  }
+  h2 {
+    font-size: 12pt;
+  }
+  p,
+  li {
+    font-size: 10.5pt;
+  }
+}
+/* Keep anchor links plain for ATS (no icons) */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+/* Limit resume width for readability */
+.container-max {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
