@@ -67,6 +67,72 @@
         border-bottom: 1px solid #dee2e6;
         padding-bottom: 0.5rem;
         margin-bottom: 1rem;
+        color: #2c3e50;
+      }
+      /* Improved header styling */
+      .resume-header h1 {
+        color: #2c3e50;
+        font-weight: 700;
+      }
+      .resume-header .title {
+        color: #3498db;
+        font-weight: 500;
+      }
+      /* Better contact info styling */
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      /* Skills grid layout */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 0.5rem;
+      }
+      .skill-item {
+        background-color: #f8f9fa;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+      /* Experience timeline styling */
+      .experience-item {
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .experience-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.75rem;
+        width: 100%;
+        height: 1px;
+        background-color: #e9ecef;
+      }
+      .company {
+        font-weight: 600;
+        color: #2c3e50;
+      }
+      .date-range {
+        color: #6c757d;
+        font-size: 0.9rem;
+      }
+      /* Project styling */
+      .project-item {
+        margin-bottom: 1.25rem;
+      }
+      .project-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.25rem;
+        font-size: 1.1rem;
       }
     </style>
   </head>
@@ -87,38 +153,38 @@
         class="paper bg-white p-4 shadow rounded"
       >
         <!-- Header -->
-        <header class="mb-4">
-          <h1 class="h2 fw-semibold text-dark mb-2">Gabriel Cavalcante</h1>
-          <p class="text-muted mb-3">Engenheiro de Software — Fullstack, IA/ML & Cloud</p>
-          <address class="text-muted">
-            <div class="mb-1">
-              <i class="bi bi-envelope me-2"></i>E-mail:
+        <header class="resume-header mb-4">
+          <h1 class="h2 fw-bold mb-2">Gabriel Cavalcante</h1>
+          <p class="title h5 mb-3">Engenheiro de Software — Fullstack, IA/ML & Cloud</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="bi bi-envelope"></i>
               <a href="mailto:gabriel.lcifba@gmail.com">zolppy.me@gmail.com</a>
             </div>
-            <div class="mb-1">
-              <i class="bi bi-telephone me-2"></i>Telefone/WhatsApp:
+            <div class="contact-item">
+              <i class="bi bi-telephone"></i>
               <a href="tel:+5574981343313">+55 (74) 98134-3313</a>
             </div>
-            <div class="mb-1">
-              <i class="bi bi-linkedin me-2"></i>LinkedIn:
+            <div class="contact-item">
+              <i class="bi bi-linkedin"></i>
               <a
                 href="https://www.linkedin.com/in/zolppy"
                 rel="noopener noreferrer"
                 >linkedin.com/in/zolppy</a
               >
             </div>
-            <div class="mb-1">
-              <i class="bi bi-github me-2"></i>GitHub:
+            <div class="contact-item">
+              <i class="bi bi-github"></i>
               <a href="https://www.github.com/zolppy" rel="noopener noreferrer"
                 >github.com/zolppy</a
               >
             </div>
-          </address>
+          </div>
         </header>
         <main>
           <!-- Professional Summary -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Resumo Profissional</h2>
+            <h2 class="h4 fw-semibold">Resumo Profissional</h2>
             <p class="text-body">
               Engenheiro de Software orientado a resultados com mais de 2 anos de experiência
               especializado em desenvolvimento frontend moderno e uma sólida
@@ -134,58 +200,76 @@
           </section>
           <!-- Skills -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Habilidades</h2>
-            <p class="text-body">
-              Acessibilidade (WCAG), AWS Cloud Computing, Boto3, Visão Computacional,
-              Redes Neurais Convolucionais, CSS3, Deep Learning, Docker,
-              Express.js, Métricas de Avaliação, FastAPI, Framer Motion, IA Generativa,
-              Git, Github, HTML5, Ajuste de Hiperparâmetros, Pré-processamento de Imagem,
-              Jest, JavaScript, Kaggle, Kanban, LangChain, Linux,
-              Aprendizado de Máquina, Processamento de Linguagem Natural, Redes Neurais,
-              Next.js, Node.js, Classificação de Objetos, Detecção de Objetos,
-              Identificação de Objetos, Reconhecimento de Objetos, Segmentação de Objetos, OpenCV,
-              Otimização de Performance, PostgreSQL, Engenharia de Prompt, Python,
-              React Testing Library, React.js, APIs REST, Geração Aumentada por Recuperação,
-              ScikitLearn, Scrum, SQL, Tailwind CSS, TensorFlow,
-              Aprendizado por Transferência, TypeScript.
-            </p>
+            <h2 class="h4 fw-semibold">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+              <span class="skill-item">Acessibilidade (WCAG)</span>
+              <span class="skill-item">AWS Cloud Computing</span>
+              <span class="skill-item">Visão Computacional</span>
+              <span class="skill-item">Redes Neurais Convolucionais</span>
+              <span class="skill-item">CSS3</span>
+              <span class="skill-item">Deep Learning</span>
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">Express.js</span>
+              <span class="skill-item">FastAPI</span>
+              <span class="skill-item">IA Generativa</span>
+              <span class="skill-item">Git</span>
+              <span class="skill-item">HTML5</span>
+              <span class="skill-item">Jest</span>
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">LangChain</span>
+              <span class="skill-item">Aprendizado de Máquina</span>
+              <span class="skill-item">Processamento de Linguagem Natural</span>
+              <span class="skill-item">Next.js</span>
+              <span class="skill-item">Node.js</span>
+              <span class="skill-item">OpenCV</span>
+              <span class="skill-item">PostgreSQL</span>
+              <span class="skill-item">Engenharia de Prompt</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">React.js</span>
+              <span class="skill-item">APIs REST</span>
+              <span class="skill-item">ScikitLearn</span>
+              <span class="skill-item">SQL</span>
+              <span class="skill-item">Tailwind CSS</span>
+              <span class="skill-item">TensorFlow</span>
+              <span class="skill-item">TypeScript</span>
+            </div>
           </section>
           <!-- Professional Experience -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Experiência Profissional</h2>
+            <h2 class="h4 fw-semibold">Experiência Profissional</h2>
             <!-- Position 1 (most recent) -->
-            <article class="mt-3">
-              <h3 class="h5 fw-semibold text-dark">Desenvolvedor Fullstack</h3>
-              <p class="text-muted mb-2">
-                Newnet — Remoto · Jacobina, BA <br />
-                <time datetime="2025-08">Out 2025</time> —
-                <time datetime="Now">Atual</time>
-              </p>
+            <article class="experience-item">
+              <h3 class="h5 fw-semibold">Desenvolvedor Fullstack</h3>
+              <div class="d-flex justify-content-between flex-wrap">
+                <span class="company">Newnet</span>
+                <span class="date-range">Out 2025 — Atual</span>
+              </div>
+              <p class="text-muted mb-2">Remoto · Jacobina, BA</p>
               <p class="text-body mb-2">
                 Atuo em todo o ciclo de desenvolvimento de soluções digitais,
                 da concepção à manutenção. Minha experiência abrange:
               </p>
               <ul class="text-body">
                 <li>
-                  1. Back-end: Planejamento, arquitetura, documentação,
+                  <strong>Back-end:</strong> Planejamento, arquitetura, documentação,
                   implementação e manutenção de APIs RESTful robustas e escaláveis,
                   garantindo segurança de dados, performance e integridade.
                 </li>
                 <li>
-                  2. Front-end: Planejamento, arquitetura, documentação,
+                  <strong>Front-end:</strong> Planejamento, arquitetura, documentação,
                   implementação e manutenção de Interfaces de Usuário (UI) modernas,
                   responsivas e focadas na experiência do usuário (UX), utilizando
                   as melhores práticas do setor.
                 </li>
               </ul>
             </article>
-            <article class="mt-3">
-              <h3 class="h5 fw-semibold text-dark">Desenvolvedor Frontend</h3>
-              <p class="text-muted mb-2">
-                Eruda — Remoto · Jacobina, BA <br />
-                <time datetime="2023-10">Out 2023</time> —
-                <time datetime="2025-04">Abr 2025</time>
-              </p>
+            <article class="experience-item">
+              <h3 class="h5 fw-semibold">Desenvolvedor Frontend</h3>
+              <div class="d-flex justify-content-between flex-wrap">
+                <span class="company">Eruda</span>
+                <span class="date-range">Out 2023 — Abr 2025</span>
+              </div>
+              <p class="text-muted mb-2">Remoto · Jacobina, BA</p>
               <ul class="text-body">
                 <li>
                   Desenvolvi e mantive interfaces de usuário modernas, fluidas e acessíveis
@@ -201,15 +285,15 @@
                 </li>
               </ul>
             </article>
-            <article class="mt-3">
-              <h3 class="h5 fw-semibold text-dark">
+            <article class="experience-item">
+              <h3 class="h5 fw-semibold">
                 Estagiário em Inteligência Artificial e Aprendizado de Máquina
               </h3>
-              <p class="text-muted mb-2">
-                Compass UOL — Remoto · Passo Fundo, RS <br />
-                <time datetime="2024-10">Out 2024</time> —
-                <time datetime="2025-03">Mar 2025</time>
-              </p>
+              <div class="d-flex justify-content-between flex-wrap">
+                <span class="company">Compass UOL</span>
+                <span class="date-range">Out 2024 — Mar 2025</span>
+              </div>
+              <p class="text-muted mb-2">Remoto · Passo Fundo, RS</p>
               <ul class="text-body">
                 <li>
                   Completei uma extensiva trilha de aprendizado cobrindo NLP, Redes
@@ -225,15 +309,15 @@
                 </li>
               </ul>
             </article>
-            <article class="mt-3">
-              <h3 class="h5 fw-semibold text-dark">
+            <article class="experience-item">
+              <h3 class="h5 fw-semibold">
                 Suporte Técnico e Integração
               </h3>
-              <p class="text-muted mb-2">
-                Infotec — Presencial · Jacobina, BA <br />
-                <time datetime="2022-11">Nov 2022</time> —
-                <time datetime="2023-04">Abr 2023</time>
-              </p>
+              <div class="d-flex justify-content-between flex-wrap">
+                <span class="company">Infotec</span>
+                <span class="date-range">Nov 2022 — Abr 2023</span>
+              </div>
+              <p class="text-muted mb-2">Presencial · Jacobina, BA</p>
               <ul class="text-body">
                 <li>
                   Montei, mantive e configurei computadores e periféricos.
@@ -246,16 +330,15 @@
                 </li>
               </ul>
             </article>
-            <article class="mt-3">
-              <h3 class="h5 fw-semibold text-dark">
+            <article class="experience-item">
+              <h3 class="h5 fw-semibold">
                 Programa Institucional de Bolsas de Iniciação Científica
               </h3>
-              <p class="text-muted mb-2">
-                Coordenação de Aperfeiçoamento de Pessoal de Nível Superior
-                (CAPES) — Híbrido · Jacobina, BA <br />
-                <time datetime="2020-11">Nov 2020</time> —
-                <time datetime="2022-05">Mai 2022</time>
-              </p>
+              <div class="d-flex justify-content-between flex-wrap">
+                <span class="company">CAPES</span>
+                <span class="date-range">Nov 2020 — Mai 2022</span>
+              </div>
+              <p class="text-muted mb-2">Híbrido · Jacobina, BA</p>
               <ul class="text-body">
                 <li>
                   Preparei planos de aula, materiais de ensino e recursos pedagógicos
@@ -274,18 +357,21 @@
           </section>
           <!-- Education -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Formação Acadêmica</h2>
+            <h2 class="h4 fw-semibold">Formação Acadêmica</h2>
             <div class="text-body">
-              <p class="fw-semibold">Bacharelado em Ciência da Computação</p>
-              <p>
+              <div class="d-flex justify-content-between flex-wrap">
+                <span class="fw-semibold">Bacharelado em Ciência da Computação</span>
+                <span class="date-range">2019 — Atual</span>
+              </div>
+              <p class="mb-0">
                 Instituto Federal de Educação, Ciência e Tecnologia da Bahia
-                (IFBA), Jacobina — 2019 — Atual.
+                (IFBA), Jacobina
               </p>
             </div>
           </section>
           <!-- Certifications -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Certificações</h2>
+            <h2 class="h4 fw-semibold">Certificações</h2>
             <ul class="text-body">
               <li>Gen AI Technical Certified — (2024)</li>
               <li>AI-Assisted Certified Professional — (2024)</li>
@@ -294,64 +380,60 @@
           </section>
           <!-- Projects -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Projetos</h2>
-            <article class="mt-3 text-body">
-              <h3 class="fw-semibold">Interior Design</h3>
-              <p class="mt-1">
+            <h2 class="h4 fw-semibold">Projetos</h2>
+            <article class="project-item">
+              <h3 class="project-title">Interior Design</h3>
+              <p class="text-body mb-0">
                 Landing page responsiva, moderna e fluida que mostra projetos de design de interiores,
                 desenvolvida usando tecnologias e metodologias de ponta como Next.js, Tailwind CSS,
                 TypeScript, Git, Github, Docker, Scrum e mobile first.
               </p>
             </article>
-            <article class="mt-3 text-body">
-              <h3 class="fw-semibold">Fashion Blog</h3>
-              <p class="mt-1">
+            <article class="project-item">
+              <h3 class="project-title">Fashion Blog</h3>
+              <p class="text-body mb-0">
                 Blog de moda responsivo, moderno e fluido que mostra projetos de design de interiores,
                 desenvolvido usando tecnologias e metodologias de ponta como Next.js, Tailwind CSS,
                 TypeScript, Git, Github, Docker, Scrum e mobile first.
               </p>
             </article>
-            <article class="mt-3 text-body">
-              <h3 class="fw-semibold">Then Crust Pizza</h3>
-              <p class="mt-1">
+            <article class="project-item">
+              <h3 class="project-title">Then Crust Pizza</h3>
+              <p class="text-body mb-0">
                 Landing page responsiva, moderna e fluida que mostra tipos de pizza à venda,
                 desenvolvida usando tecnologias e metodologias de ponta como Next.js, Tailwind CSS,
                 TypeScript, Git, Github, Docker, Scrum e mobile first.
               </p>
             </article>
-            <article class="mt-3 text-body">
-              <h3 class="fw-semibold">Celebrity Face Recognition</h3>
-              <p class="mt-1">
+            <article class="project-item">
+              <h3 class="project-title">Celebrity Face Recognition</h3>
+              <p class="text-body mb-0">
                 Sistema de reconhecimento facial de celebridades construído usando deep learning.
                 Ele aproveita uma Rede Neural Convolucional para identificar indivíduos
-                de um conjunto de imagens de celebridades. O sistema primeiro
-                pré-processa os dados de imagem, treina o modelo e depois usa um
-                classificador Haar Cascade para detectar rostos em novas imagens.
+                de um conjunto de imagens de celebridades.
               </p>
             </article>
-            <article class="mt-3 text-body">
-              <h3 class="fw-semibold">Recommendation System</h3>
-              <p class="mt-1">
+            <article class="project-item">
+              <h3 class="project-title">Recommendation System</h3>
+              <p class="text-body mb-0">
                 Este projeto demonstra a criação de um sistema de recomendação de imagens
                 baseado em conteúdo. Ele aproveita um modelo de deep learning VGG16 pré-treinado
-                para extrair vetores de características significativos das
-                imagens. Essas características são então comparadas usando similaridade de cosseno
-                para identificar e recomendar imagens visualmente semelhantes.
+                para extrair vetores de características significativos das imagens.
               </p>
             </article>
-            <article class="mt-3 text-body">
-              <h3 class="fw-semibold">Object Detection With YOLO</h3>
-              <p class="mt-1">
+            <article class="project-item">
+              <h3 class="project-title">Object Detection With YOLO</h3>
+              <p class="text-body mb-0">
                 Este projeto demonstra como treinar um modelo de detecção de objetos YOLOv8
                 para detectar vários tipos de frutas. O processo envolve
                 carregar um modelo YOLOv8 pré-treinado, treiná-lo em um conjunto de dados
-                personalizado de frutas, avaliar seu desempenho e executar
-                inferência em imagens de exemplo.
+                personalizado de frutas e avaliar seu desempenho.
               </p>
             </article>
           </section>
+          <!-- Languages -->
           <section class="resume-section">
-            <h2 class="h4 fw-medium text-dark">Idiomas</h2>
+            <h2 class="h4 fw-semibold">Idiomas</h2>
             <ul class="text-body">
               <li>Português (nativo)</li>
               <li>Inglês (avançado)</li>
@@ -359,7 +441,7 @@
           </section>
           <!-- Footer -->
           <footer class="mt-4 text-muted small">
-            <p>
+            <p class="mb-0">
               Palavras-chave: Desenvolvedor de Inteligência Artificial, Computação em Nuvem AWS,
               Desenvolvedor Back-end, Desenvolvedor Front-end, Desenvolvedor Fullstack,
               Desenvolvedor de Machine Learning, Engenharia de Prompt.
@@ -419,4 +501,3 @@
     </script>
   </body>
 </html>
-[file content end]
