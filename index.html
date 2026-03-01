@@ -30,9 +30,6 @@
           background: #fff !important;
           color: #000 !important;
         }
-        #exportBtn {
-          display: none !important;
-        }
         .no-print {
           display: none !important;
         }
@@ -161,12 +158,6 @@
   </head>
   <body class="bg-light py-4">
     <div class="container container-max">
-      <!-- Export button -->
-      <div class="d-flex justify-content-end mb-3 no-print">
-        <button id="exportBtn" class="btn btn-dark">
-          <i class="bi bi-file-earmark-pdf me-2"></i>Exportar para PDF
-        </button>
-      </div>
       <!-- Resume content (only this element will be exported) -->
       <article id="resume" class="paper bg-white p-4 shadow rounded">
         <!-- Header -->
@@ -203,12 +194,15 @@
           <section class="resume-section">
             <h2 class="h4 fw-semibold">Resumo Profissional</h2>
             <p class="text-body">
-              Atuo no ciclo completo de desenvolvimento de soluções digitais, desde a concepção até a manutenção. Minha
-              expertise abrange o back-end, com planejamento, arquitetura, documentação, implementação e manutenção de
-              APIs RESTful robustas e escaláveis, garantindo segurança, performance e integridade dos dados. No
-              front-end, realizo planejamento, arquitetura, documentação, implementação e manutenção de interfaces de
-              usuário (UI) modernas, responsivas e com foco na experiência do usuário (UX), utilizando as melhores
-              práticas do mercado.
+              Atuo no ciclo completo de desenvolvimento de soluções digitais,
+              desde a concepção até a manutenção. Minha expertise abrange o
+              back-end, com planejamento, arquitetura, documentação,
+              implementação e manutenção de APIs RESTful robustas e escaláveis,
+              garantindo segurança, performance e integridade dos dados. No
+              front-end, realizo planejamento, arquitetura, documentação,
+              implementação e manutenção de interfaces de usuário (UI) modernas,
+              responsivas e com foco na experiência do usuário (UX), utilizando
+              as melhores práticas do mercado.
             </p>
           </section>
 
@@ -288,9 +282,7 @@
               </ul>
             </article>
             <article class="experience-item">
-              <h3 class="h5 fw-semibold">
-                Desenvolvedor IA/ML
-              </h3>
+              <h3 class="h5 fw-semibold">Desenvolvedor IA/ML</h3>
               <div class="d-flex justify-content-between flex-wrap">
                 <span class="company">Compass UOL</span>
                 <span class="date-range">Out 2024 — Mar 2025</span>
@@ -417,41 +409,5 @@
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- html2pdf CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-    <script>
-      // Export to PDF using html2pdf.js, exporting the #resume element so the export button is not included.
-      document
-        .getElementById("exportBtn")
-        .addEventListener("click", function () {
-          const element = document.getElementById("resume");
-
-          // Options tuned for print-like output with page breaks enabled via CSS
-          const opt = {
-            margin: [8, 8, 8, 8], // mm (reduced slightly to fit more content)
-            filename: "curriculo-gabriel-cavalcante.pdf",
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: {
-              scale: 2,
-              useCORS: true,
-              logging: false,
-              // Allow larger render size for better fidelity
-              windowWidth: document.documentElement.scrollWidth,
-            },
-            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-            pagebreak: { mode: "css" }, // Enable CSS page break support
-          };
-
-          // Generate PDF
-          html2pdf()
-            .set(opt)
-            .from(element)
-            .save()
-            .catch(function (err) {
-              console.error("PDF export failed", err);
-              alert("Export failed. Please try again in a modern browser.");
-            });
-        });
-    </script>
   </body>
 </html>
